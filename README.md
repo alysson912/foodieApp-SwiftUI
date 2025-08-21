@@ -1,2 +1,2 @@
 # foodieApp-SwiftUI
-foodierAapOrder, building with SwiftUI + MVVM
+foodieAppOrder, building with SwiftUI + MVVM
