@@ -1,0 +1,254 @@
+{
+  "request": [
+    {
+      "id": 1,
+      "name": "Bruschetta Italiana",
+      "description": "Pão crocante com tomate fresco, manjericão e azeite de oliva.",
+      "price": 9.99,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 150,
+      "protein": 10,
+      "carbs": 20
+    },
+    {
+      "id": 2,
+      "name": "Bolinhos de Bacalhau",
+      "description": "Deliciosos bolinhos de bacalhau desfiado com batata e temperos.",
+      "price": 10.49,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 180,
+      "protein": 12,
+      "carbs": 25
+    },
+    {
+      "id": 3,
+      "name": "Salada Caprese",
+      "description": "Mussarela de búfala, tomate e manjericão com azeite balsâmico.",
+      "price": 8.99,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 120,
+      "protein": 8,
+      "carbs": 15
+    },
+    {
+      "id": 4,
+      "name": "Ceviche Peruano",
+      "description": "Peixe branco marinado em limão com cebola roxa e coentro.",
+      "price": 11.99,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 200,
+      "protein": 15,
+      "carbs": 30
+    },
+    {
+      "id": 5,
+      "name": "Azeitonas Temperadas",
+      "description": "Seleção de azeitonas verdes e pretas com ervas e alho.",
+      "price": 7.49,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 100,
+      "protein": 6,
+      "carbs": 10
+    },
+    {
+      "id": 6,
+      "name": "Carpaccio de Carne",
+      "description": "Finas fatias de carne crua com rúcula e parmesão.",
+      "price": 9.49,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 160,
+      "protein": 11,
+      "carbs": 22
+    },
+    {
+      "id": 7,
+      "name": "Camembert Assado",
+      "description": "Queijo camembert assado com mel e nozes.",
+      "price": 10.99,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 170,
+      "protein": 14,
+      "carbs": 28
+    },
+    {
+      "id": 8,
+      "name": "Ostras Frescas",
+      "description": "Ostras frescas servidas com limão e molho cocktail.",
+      "price": 12.99,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 210,
+      "protein": 16,
+      "carbs": 32
+    },
+    {
+      "id": 9,
+      "name": "Espetinho de Vegetais",
+      "description": "Espetinho grelhado de legumes com molho de iogurte.",
+      "price": 8.49,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 130,
+      "protein": 9,
+      "carbs": 18
+    },
+    {
+      "id": 10,
+      "name": "Tábua de Frios",
+      "description": "Seleção de queijos, salames e presunto com acompanhamentos.",
+      "price": 9.75,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 155,
+      "protein": 10,
+      "carbs": 21
+    },
+    {
+      "id": 11,
+      "name": "Cogumelos Recheados",
+      "description": "Cogumelos paris recheados com queijo e ervas.",
+      "price": 7.99,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 110,
+      "protein": 7,
+      "carbs": 12
+    },
+    {
+      "id": 12,
+      "name": "Guacamole Caseiro",
+      "description": "Abacate amassado com tomate, cebola e coentro, servido com tortilhas.",
+      "price": 10.25,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 165,
+      "protein": 12,
+      "carbs": 23
+    },
+    {
+      "id": 13,
+      "name": "Polvo à Lagareiro",
+      "description": "Polvo grelhado com azeite, alho e batatas.",
+      "price": 11.25,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 175,
+      "protein": 13,
+      "carbs": 27
+    },
+    {
+      "id": 14,
+      "name": "Pastéis de Vento",
+      "description": "Pastéis folhados recheados com carne moída temperada.",
+      "price": 8.25,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 140,
+      "protein": 9,
+      "carbs": 16
+    },
+    {
+      "id": 15,
+      "name": "Salada de Quinoa",
+      "description": "Quinoa com vegetais frescos e molho de limão.",
+      "price": 9.59,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 150,
+      "protein": 10,
+      "carbs": 20
+    },
+    {
+      "id": 16,
+      "name": "Coxinha de Frango",
+      "description": "Salgado em forma de gota com recheio de frango desfiado.",
+      "price": 10.79,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 185,
+      "protein": 14,
+      "carbs": 26
+    },
+    {
+      "id": 17,
+      "name": "Antepasto de Berinjela",
+      "description": "Berinjela assada com azeite, alho e pimenta.",
+      "price": 12.25,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 190,
+      "protein": 15,
+      "carbs": 29
+    },
+    {
+      "id": 18,
+      "name": "Empanadas de Carne",
+      "description": "Massa folhada recheada com carne temperada e azeitonas.",
+      "price": 9.35,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 135,
+      "protein": 10,
+      "carbs": 19
+    },
+    {
+      "id": 19,
+      "name": "Dadinhos de Tapioca",
+      "description": "Tapioca grelhada com queijo coalho e molho de pimenta.",
+      "price": 8.89,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 145,
+      "protein": 11,
+      "carbs": 17
+    },
+    {
+      "id": 20,
+      "name": "Camarão ao Alho",
+      "description": "Camarões salteados com alho, ervas e azeite.",
+      "price": 9.19,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 160,
+      "protein": 12,
+      "carbs": 24
+    },
+    {
+      "id": 21,
+      "name": "Pão de Alho",
+      "description": "Pão italiano com recheio de alho e queijo.",
+      "price": 10.10,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 170,
+      "protein": 13,
+      "carbs": 25
+    },
+    {
+      "id": 22,
+      "name": "Escondidinho de Carne Seca",
+      "description": "Purê de mandioca com carne seca desfiada.",
+      "price": 11.49,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 200,
+      "protein": 16,
+      "carbs": 31
+    },
+    {
+      "id": 23,
+      "name": "Quibe de Forno",
+      "description": "Quibe assado com trigo, carne moída e temperos.",
+      "price": 9.79,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 150,
+      "protein": 11,
+      "carbs": 20
+    },
+    {
+      "id": 24,
+      "name": "Mini Coxinhas de Jaca",
+      "description": "Coxinhas vegetarianas com recheio de jaca desfiada.",
+      "price": 8.75,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 130,
+      "protein": 9,
+      "carbs": 18
+    },
+    {
+      "id": 25,
+      "name": "Rodízio de Entradas",
+      "description": "Seleção completa de todas as entradas do cardápio.",
+      "price": 81.75,
+      "imageURL": "https://picsum.photos/600/600",
+      "calories": 1320,
+      "protein": 92,
+      "carbs": 118
+    }
+  ]
+}
