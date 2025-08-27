@@ -7,6 +7,29 @@
 
 import SwiftUI
 
+//struct AlertItem2: Identifiable {
+//    let id = UUID()
+//    let title: Text
+//    let message: Text
+//    let dismissButtonTitle: String
+//    let isDestructive: Bool
+//    let action: (() -> Void)?
+//}
+
+//struct AlertItemDois {
+//    
+//    private let invalidData = AlertItem2(
+//        title: Text("Server Error"),
+//        message: Text("The data received from the server was invalid. Please contact support."),
+//        dismissButtonTitle: "OK",
+//        isDestructive: false,
+//        action: nil
+//    )
+//   
+//
+//}
+
+
 struct AlertItem: Identifiable {
     let id = UUID()
     let title: Text
