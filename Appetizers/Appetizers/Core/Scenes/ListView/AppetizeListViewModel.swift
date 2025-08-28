@@ -9,7 +9,7 @@ import Foundation
 
 
 final class AppetizerListViewModel: ObservableObject {
-    @Published var appetizers: [Appetizer] = []
+    @Published var appetizers: [AppetizerModel] = []
     @Published var alertItem: AlertItem?
     @Published var isLoading: Bool = false
     

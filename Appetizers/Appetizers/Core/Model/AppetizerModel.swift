@@ -31,9 +31,9 @@ struct MockData {
                                            description: "This is the description for my appetizer. It's yummy.",
                                            price: 9.99,
                                            imageURL: Constants.randomImage,
-                                           calories: 99,
-                                           protein: 99,
-                                           carbs: 99)
+                                           calories: 919,
+                                           protein: 19,
+                                           carbs: 349)
     
     static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
     

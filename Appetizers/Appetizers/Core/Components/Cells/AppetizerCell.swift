@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct AppetizerCell: View {
-    let appetizer: Appetizer
+    let appetizer: AppetizerModel
     
     var body: some View {
         HStack {
-            ImageLoaderView()
+            //ImageLoaderView()
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 90)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             

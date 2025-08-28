@@ -5,6 +5,7 @@
 //  Created by ALYSSON MENEZES on 27/08/25.
 //
 
+import UIKit
 import SwiftUI
 
 struct ActivityIndicator: UIViewRepresentable {
