@@ -10,10 +10,11 @@ import SwiftUI
 struct DetailView: View {
     
     let appetizer: AppetizerModel
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack {
-            ImageLoaderView()
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
                 .frame(width: 320, height: 225)
             
             VStack {
@@ -87,7 +88,7 @@ struct DetailView: View {
         .overlay(alignment: .topTrailing) {
             
             Button {
-                print("Dismiss")
+                isShowingDetail = false
             }label: {
                 ZStack {
                 
@@ -111,5 +112,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(appetizer: MockData.sampleAppetizer)
+    DetailView(appetizer: MockData.sampleAppetizer, isShowingDetail: .constant(true))
 }
