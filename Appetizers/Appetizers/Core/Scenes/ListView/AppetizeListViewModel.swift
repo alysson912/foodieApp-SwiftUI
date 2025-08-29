@@ -12,7 +12,6 @@ final class AppetizerListViewModel: ObservableObject {
     @Published var appetizers: [AppetizerModel] = []
     @Published var alertItem: AlertItem?
     @Published var isLoading: Bool = false
-    
     /*
      //MARK: Usamos o @Published em variáveis dentro da ViewModel para notificar automaticamente a interface (View) sempre que o valor da variável mudar.
      
@@ -20,6 +19,9 @@ final class AppetizerListViewModel: ObservableObject {
      “Se essa variável mudar, avise todos que estão observando essa classe.”
      
      */
+    
+    @Published var isShowingDetail = false
+    @Published var selectedAppetizer: AppetizerModel?
     
     func getAppetizers() {
         isLoading = true

@@ -11,8 +11,7 @@ import SwiftUI
 struct AppetizeListView: View {
     
     @StateObject private var viewModel = AppetizerListViewModel()
-    @State private var isShowingDetail = false
-    @State private var selectedAppetizer: AppetizerModel?
+  
     
     var body: some View {
         ZStack {
@@ -21,21 +20,21 @@ struct AppetizeListView: View {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerCell(appetizer: appetizer)
                         .onTapGesture {
-                            selectedAppetizer = appetizer
-                            isShowingDetail = true
+                            viewModel.selectedAppetizer = appetizer
+                            viewModel.isShowingDetail = true
                         }
                 }
                 
                 .navigationTitle("🍟 Appetizers")
-                .disabled(isShowingDetail) // disable scroll in subView
+                .disabled(viewModel.isShowingDetail) // disable scroll in subView
             }
             .onAppear {
                 viewModel.getAppetizers()
             }
-            .blur(radius: isShowingDetail ? 20 : 0) // se for verdadeiro apliquique o blur
+            .blur(radius: viewModel.isShowingDetail ? 20 : 0) // se for verdadeiro apliquique o blur
             
-            if isShowingDetail {
-                DetailView(appetizer: selectedAppetizer!, isShowingDetail: $isShowingDetail)
+            if viewModel.isShowingDetail {
+                DetailView(appetizer: viewModel.selectedAppetizer!, isShowingDetail: $viewModel.isShowingDetail)
             }
             
             if viewModel.isLoading {

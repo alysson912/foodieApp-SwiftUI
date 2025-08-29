@@ -27,40 +27,8 @@ struct DetailView: View {
                     .font(.body)
                     .padding()
                 
-                HStack(spacing: 40){
-                    VStack(spacing: 5){
-                        Text("Calories")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.calories)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack (spacing: 5){
-                        Text("Carbs")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.carbs)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack (spacing: 5){
-                        Text("Protein")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.protein)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                }
+                NutritionInfo
+                
             }
             
             Spacer()
@@ -68,17 +36,11 @@ struct DetailView: View {
             Button {
                 print("Button tapped")
             } label: {
-                Text("$\(appetizer.price, specifier: "%.2f") - Aadd order")
                 
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 260, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.brandPrimary)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                OrderButton(title: "$\(appetizer.price, specifier: "%.2f") - Add order")
             }
             .padding(.bottom, 30)
-             
+            
             
         }
         .frame(width: 300, height: 525)
@@ -90,23 +52,47 @@ struct DetailView: View {
             Button {
                 isShowingDetail = false
             }label: {
-                ZStack {
                 
-                Circle()
-                    .frame(width: 30, height: 30)
-                    .foregroundStyle(Color.white)
-                    .opacity(0.6) // <- DarkMode
-                    
-                    
-                Image(systemName: "xmark")
-                        .imageScale(.small)
-                    .frame(width: 44, height: 44)
-                    .foregroundStyle(Color.xMarkButton) // <- DarkMode
-                                
-                }
-                
+                XDismissButton()
             }
             
+        }
+    }
+    
+    private var NutritionInfo: some View {
+        HStack (spacing: 40){
+            VStack(spacing: 5){
+                Text("Calories")
+                    .bold()
+                    .font(.caption)
+                
+                Text("\(appetizer.calories)")
+                    .foregroundStyle(.secondary)
+                    .fontWeight(.semibold)
+                    .italic()
+            }
+            
+            VStack (spacing: 5){
+                Text("Carbs")
+                    .bold()
+                    .font(.caption)
+                
+                Text("\(appetizer.carbs)")
+                    .foregroundStyle(.secondary)
+                    .fontWeight(.semibold)
+                    .italic()
+            }
+            
+            VStack (spacing: 5){
+                Text("Protein")
+                    .bold()
+                    .font(.caption)
+                
+                Text("\(appetizer.protein)")
+                    .foregroundStyle(.secondary)
+                    .fontWeight(.semibold)
+                    .italic()
+            }
         }
     }
 }
