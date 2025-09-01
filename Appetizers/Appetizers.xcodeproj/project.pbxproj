@@ -29,6 +29,8 @@
 		4B8FBE352E6082E100142E93 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE342E6082E100142E93 /* DetailView.swift */; };
 		4B8FBE612E623A1100142E93 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE602E623A1100142E93 /* OrderButton.swift */; };
 		4B8FBE632E623C7B00142E93 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE622E623C7B00142E93 /* XDismissButton.swift */; };
+		4B8FBE8E2E663B2300142E93 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE8D2E663B2300142E93 /* AccountViewModel.swift */; };
+		4B8FBE902E6644C000142E93 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE8F2E6644C000142E93 /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		4B8FBE342E6082E100142E93 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4B8FBE602E623A1100142E93 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		4B8FBE622E623C7B00142E93 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		4B8FBE8D2E663B2300142E93 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		4B8FBE8F2E6644C000142E93 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				4B3117332E5F9FE0005FF588 /* Color+Ext.swift */,
+				4B8FBE8F2E6644C000142E93 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		4B8FBE2C2E607E9C00142E93 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				4B8FBE8D2E663B2300142E93 /* AccountViewModel.swift */,
 				4B3117272E5F9FE0005FF588 /* AccountView.swift */,
 			);
 			path = Account;
@@ -323,6 +329,7 @@
 				4B8FBE352E6082E100142E93 /* DetailView.swift in Sources */,
 				4B31173B2E5F9FE0005FF588 /* LoadingView.swift in Sources */,
 				4B31173C2E5F9FE0005FF588 /* AppetizerModel.swift in Sources */,
+				4B8FBE8E2E663B2300142E93 /* AccountViewModel.swift in Sources */,
 				4B31173D2E5F9FE0005FF588 /* AppetizeListView.swift in Sources */,
 				4B31173E2E5F9FE0005FF588 /* AppetizeListViewModel.swift in Sources */,
 				4B31173F2E5F9FE0005FF588 /* AccountView.swift in Sources */,
@@ -331,6 +338,7 @@
 				4B8FBE632E623C7B00142E93 /* XDismissButton.swift in Sources */,
 				4B3117422E5F9FE0005FF588 /* AppetizersApp.swift in Sources */,
 				4B3117432E5F9FE0005FF588 /* APError.swift in Sources */,
+				4B8FBE902E6644C000142E93 /* String+Ext.swift in Sources */,
 				4B3117D72E5FAE9D005FF588 /* RemoteImage.swift in Sources */,
 				4B3117442E5F9FE0005FF588 /* Constants.swift in Sources */,
 				4B3117452E5F9FE0005FF588 /* ImageLoaderView.swift in Sources */,

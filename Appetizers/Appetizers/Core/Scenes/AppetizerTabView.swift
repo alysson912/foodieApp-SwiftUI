@@ -23,9 +23,7 @@ struct AppetizerTabView: View {
         
         ZStack {
             
-            
-            
-            
+        
             VStack {
                 
                 TabView(selection: $selectedTab) {
