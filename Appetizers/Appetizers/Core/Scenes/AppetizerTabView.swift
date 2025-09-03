@@ -17,23 +17,18 @@ enum TabIdentifier: Hashable {
 struct AppetizerTabView: View {
     
     @State private var selectedTab: TabIdentifier = .home
-
     
     var body: some View {
         
         ZStack {
-            
-        
             VStack {
                 
                 TabView(selection: $selectedTab) {
                     Tab("Home", systemImage: "house", value: TabIdentifier.home) {
                         AppetizeListView()
-                            
                     }
-                    
-                    
-                    Tab("Home", systemImage: "person.fill", value: TabIdentifier.account) {
+                                        
+                    Tab("Account", systemImage: "person.fill", value: TabIdentifier.account) {
                         AccountView()
                     }
                     
@@ -46,11 +41,9 @@ struct AppetizerTabView: View {
                 .tabViewStyle(.automatic)
                 .tint(.brandPrimary)
             }
-            
         }
         
-            
-        
+                    
         
     }
 }

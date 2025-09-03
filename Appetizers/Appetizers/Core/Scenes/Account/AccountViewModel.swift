@@ -6,33 +6,54 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class AccountViewModel: ObservableObject {
     
-    @Published var firstName = ""
-    @Published var lastName = ""
-    @Published var email = ""
-    @Published var birthdate: Date = Date()
-    @Published var extraNapkins: Bool = false
-    @Published var frequentRefills: Bool = true
-    
+    @AppStorage("user") private var userData: Data?
+    @Published var user = User()
     @Published var alertItem: AlertItem?
     
+    
+    
+    //MARK: SALVANDO USER COM AppStorage iOS 14+
+    
+    func saveChanges() {
+        guard isValidForm else { return } // verificando se o form é valido
+        
+        do {
+            let data = try JSONEncoder().encode(user) // CODIFICANDO  user para depois salvar como dados
+            userData = data
+            alertItem = AlertContext.userSaveSuccess // alert success
+        } catch {
+            alertItem = AlertContext.invalidUserData // alert error
+        }
+    }
+    
+    //MARK: RECUPERANDO DADOS SALVOS
+    
+    func retrieveUser() {
+        guard let userData = userData else { return }
+        
+        do {
+            user = try JSONDecoder().decode(User.self, from: userData)
+        } catch {
+            alertItem = AlertContext.invalidUserData
+        }
+    }
+    
     var isValidForm: Bool {
-        guard !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty else {
+        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
             alertItem = AlertContext.invalidForm
             return false
         }
         
-        guard email.isValidEmail else {
+        guard user.email.isValidEmail else {
             alertItem = AlertContext.invalidEmail
             return false
         }
         return true 
     }
     
-    func saveChanges() {
-        guard isValidForm else { return }
-        print("Changes have been saved successfully")
-    }
+  
 }
