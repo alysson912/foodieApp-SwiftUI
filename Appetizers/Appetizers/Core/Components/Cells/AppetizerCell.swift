@@ -18,7 +18,7 @@ struct AppetizerCell: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 120, height: 90)
-                    .cornerRadius(8)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             } placeholder: {
                 
             }

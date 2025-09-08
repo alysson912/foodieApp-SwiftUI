@@ -37,7 +37,7 @@ struct DetailView: View {
                 print("Button tapped")
             } label: {
                 
-                OrderButton(title: "$\(appetizer.price, specifier: "%.2f") - Add order")
+                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add order")
             }
             .padding(.bottom, 30)
             
