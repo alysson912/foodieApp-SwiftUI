@@ -17,6 +17,7 @@ enum TabIdentifier: Hashable {
 struct AppetizerTabView: View {
     
     @State private var selectedTab: TabIdentifier = .home
+    @EnvironmentObject var order: Order
     
     var body: some View {
         
@@ -34,6 +35,7 @@ struct AppetizerTabView: View {
                     
                     Tab("Order", systemImage: "bag", value: TabIdentifier.home) {
                         OrderView()
+                        
                     }
                     
                 }

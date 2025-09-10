@@ -4,53 +4,53 @@
 //
 //  Created by ALYSSON MENEZES on 21/08/25.
 //
-
 import SwiftUI
-
-final class OrderViewModel: ObservableObject {
-    @Published  var orderItems = MockData.orderItems
-    
-    
-    
-    func deleteItems(at offesets: IndexSet) {
-        orderItems.remove(atOffsets: offesets)
-    }
-}
 
 
 struct OrderView: View {
     
-    @StateObject private var viewModel = OrderViewModel()
+    
+    @EnvironmentObject  var order: Order
+    
     
     var body: some View {
         NavigationStack {
-            VStack {
-                List {
-                    ForEach(MockData.orderItems) { appetizer in
-                        AppetizerCell(appetizer: appetizer)
+            ZStack {
+                VStack {
+                    List {
+                        ForEach(order.items) { appetizer in
+                            AppetizerCell(appetizer: appetizer)
+                        }
+                        .onDelete(perform: order.deleteItems) // delete Cell with scroll
+                        
                     }
-                    .onDelete(perform: viewModel.deleteItems) // delete Cell with scroll
+                    .listStyle(PlainListStyle())
                     
+                    
+                    Button {
+                        print("order placed")
+                    } label: {
+                        APButton(title: "$99.99 - Place Order")
+                    }
+                    .padding(.bottom, 25)
                 }
-                .listStyle(PlainListStyle())
                 
-                
-                Button {
-                    print("order placed")
-                } label: {
-                    APButton(title: "$99.99 - Place Order")
+                if order.items.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "You have no items in your order. \n  Please add an appetizer!")
                 }
-                .padding(.bottom, 20)
             }
-
-            .navigationTitle("📋 OrderView")
+                
+                .navigationTitle("📋 OrderView")
+            }
                 
         }
+    
+  
      
     }
     
    
-}
+
 
 #Preview {
     OrderView()

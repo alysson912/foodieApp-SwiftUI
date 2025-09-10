@@ -27,6 +27,8 @@
 		4B3117472E5F9FE0005FF588 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3117332E5F9FE0005FF588 /* Color+Ext.swift */; };
 		4B3117D72E5FAE9D005FF588 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3117D62E5FAE9D005FF588 /* RemoteImage.swift */; };
 		4B36E29C2E68EC9100EF06DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B36E29B2E68EC9100EF06DD /* User.swift */; };
+		4B36E29F2E6F8AE600EF06DD /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B36E29E2E6F8AE600EF06DD /* EmptyState.swift */; };
+		4B36E2A12E71A0AF00EF06DD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B36E2A02E71A0AF00EF06DD /* Order.swift */; };
 		4B8FBE352E6082E100142E93 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE342E6082E100142E93 /* DetailView.swift */; };
 		4B8FBE612E623A1100142E93 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE602E623A1100142E93 /* APButton.swift */; };
 		4B8FBE632E623C7B00142E93 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBE622E623C7B00142E93 /* XDismissButton.swift */; };
@@ -54,6 +56,8 @@
 		4B3117352E5F9FE0005FF588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3117D62E5FAE9D005FF588 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		4B36E29B2E68EC9100EF06DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4B36E29E2E6F8AE600EF06DD /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		4B36E2A02E71A0AF00EF06DD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		4B7EB5F72E57CAA300EC2531 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8FBE342E6082E100142E93 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4B8FBE602E623A1100142E93 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				4B3117212E5F9FE0005FF588 /* AppetizerModel.swift */,
 				4B3117222E5F9FE0005FF588 /* Request.json */,
 				4B36E29B2E68EC9100EF06DD /* User.swift */,
+				4B36E2A02E71A0AF00EF06DD /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		4B3117292E5F9FE0005FF588 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4B36E29D2E6F89EC00EF06DD /* Empty States */,
 				4B31172A2E5F9FE0005FF588 /* AppetizerTabView.swift */,
 				4B8FBE312E60820400142E93 /* ListDetailView */,
 				4B8FBE2D2E607EA900142E93 /* Order */,
@@ -171,6 +177,14 @@
 				4B3117352E5F9FE0005FF588 /* Assets.xcassets */,
 			);
 			path = Appetizers;
+			sourceTree = "<group>";
+		};
+		4B36E29D2E6F89EC00EF06DD /* Empty States */ = {
+			isa = PBXGroup;
+			children = (
+				4B36E29E2E6F8AE600EF06DD /* EmptyState.swift */,
+			);
+			path = "Empty States";
 			sourceTree = "<group>";
 		};
 		4B7EB5EE2E57CAA300EC2531 = {
@@ -326,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B36E29F2E6F8AE600EF06DD /* EmptyState.swift in Sources */,
 				4B8FBE612E623A1100142E93 /* APButton.swift in Sources */,
 				4B3117392E5F9FE0005FF588 /* Alert.swift in Sources */,
 				4B31173A2E5F9FE0005FF588 /* AppetizerCell.swift in Sources */,
@@ -341,6 +356,7 @@
 				4B3117412E5F9FE0005FF588 /* AppetizerTabView.swift in Sources */,
 				4B8FBE632E623C7B00142E93 /* XDismissButton.swift in Sources */,
 				4B3117422E5F9FE0005FF588 /* AppetizersApp.swift in Sources */,
+				4B36E2A12E71A0AF00EF06DD /* Order.swift in Sources */,
 				4B3117432E5F9FE0005FF588 /* APError.swift in Sources */,
 				4B8FBE902E6644C000142E93 /* String+Ext.swift in Sources */,
 				4B3117D72E5FAE9D005FF588 /* RemoteImage.swift in Sources */,
