@@ -10,7 +10,7 @@ import SwiftUI
 struct OrderView: View {
     
     
-    @EnvironmentObject  var order: Order
+    @EnvironmentObject var order: Order
     
     
     var body: some View {
@@ -30,7 +30,7 @@ struct OrderView: View {
                     Button {
                         print("order placed")
                     } label: {
-                        APButton(title: "$99.99 - Place Order")
+                        APButton(title: "\(order.totalPrice, specifier: "%.2f") - Place Order")
                     }
                     .padding(.bottom, 25)
                 }
@@ -54,4 +54,5 @@ struct OrderView: View {
 
 #Preview {
     OrderView()
+        .environmentObject(Order()) // recebendo a injecao de dados la da tabView
 }
