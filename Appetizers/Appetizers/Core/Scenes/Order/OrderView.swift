@@ -14,7 +14,7 @@ struct OrderView: View {
     
     
     var body: some View {
-        NavigationStack {
+        NavigationView { // iOS 15 -
             ZStack {
                 VStack {
                     List {

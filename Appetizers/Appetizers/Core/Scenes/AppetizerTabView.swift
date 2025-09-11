@@ -16,40 +16,41 @@ enum TabIdentifier: Hashable {
 
 struct AppetizerTabView: View {
     
-    @State private var selectedTab: TabIdentifier = .home
+   // @State private var selectedTab: TabIdentifier = .home
     @EnvironmentObject var order: Order
     
     var body: some View {
         
-        ZStack {
-            VStack {
+      
                 
-                TabView(selection: $selectedTab) {
-                    Tab("Home", systemImage: "house", value: TabIdentifier.home) {
-                        AppetizeListView()
-                    }
-                                        
-                    Tab("Account", systemImage: "person.fill", value: TabIdentifier.account) {
-                        AccountView()
-                    }
+                TabView {
+                    // Tab("Home", systemImage: "house", value: TabIdentifier.home) { iOS 18+
+                    AppetizeListView()
+                        .tabItem { Label("Home", systemImage: "house") }
+                    //  }
                     
-                    Tab("Order", systemImage: "bag", value: TabIdentifier.home) {
-                        OrderView()
-                        
-                    }
-                    
-                }
+                    //  Tab("Account", systemImage: "person.fill", value: TabIdentifier.account) {
+                    AccountView()
+                        .tabItem { Label("Account", systemImage: "person") }
                 
-                .tabViewStyle(.automatic)
-                .tint(.brandPrimary)
+                
+                //   Tab("Order", systemImage: "bag", value: TabIdentifier.home) {
+                OrderView()
+                    .tabItem { Label("Order", systemImage: "bag") }
+                    .badge(order.items.count)
             }
+        
         }
         
-                    
-        
-    }
 }
+        //        .tabViewStyle(.automatic)
+        //        .tint(.brandPrimary)
+
+
+        
+
 
 #Preview {
     AppetizerTabView()
+        .environmentObject(Order())
 }
