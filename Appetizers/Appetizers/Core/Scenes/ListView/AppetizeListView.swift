@@ -16,9 +16,14 @@ struct AppetizeListView: View {
     var body: some View {
         ZStack {
             NavigationStack {
-                //MARK:
+                
                 List(viewModel.appetizers) { appetizer in
+//MARK: Celulas da tableView
                     AppetizerCell(appetizer: appetizer)
+                        .listRowSeparator(.hidden)
+                       // .listRowSeparatorTint(.brandPrimary)
+                    
+ //MARK: Action ao clicar em 1 celula
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetail = true
@@ -26,6 +31,7 @@ struct AppetizeListView: View {
                 }
                 
                 .navigationTitle("🍟 Appetizers")
+                .listStyle(.plain)
                 .disabled(viewModel.isShowingDetail) // disable scroll in subView
             }
             .onAppear {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B058E6B2E730A630078D6E8 /* StandardButtonSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B058E6A2E730A630078D6E8 /* StandardButtonSyle.swift */; };
 		4B3116E72E58AE2E005FF588 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4B3116E62E58AE2E005FF588 /* SDWebImageSwiftUI */; };
 		4B3117372E5F9FE0005FF588 /* Request.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B3117222E5F9FE0005FF588 /* Request.json */; };
 		4B3117382E5F9FE0005FF588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3117352E5F9FE0005FF588 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B058E6A2E730A630078D6E8 /* StandardButtonSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonSyle.swift; sourceTree = "<group>"; };
 		4B31171B2E5F9FE0005FF588 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4B31171D2E5F9FE0005FF588 /* AppetizerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerCell.swift; sourceTree = "<group>"; };
 		4B31171F2E5F9FE0005FF588 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B058E692E730A350078D6E8 /* CustomModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4B058E6A2E730A630078D6E8 /* StandardButtonSyle.swift */,
+			);
+			path = CustomModifiers;
+			sourceTree = "<group>";
+		};
 		4B31171C2E5F9FE0005FF588 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 			children = (
 				4B8FBE602E623A1100142E93 /* APButton.swift */,
 				4B8FBE622E623C7B00142E93 /* XDismissButton.swift */,
+				4B058E692E730A350078D6E8 /* CustomModifiers */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -344,6 +355,7 @@
 				4B8FBE612E623A1100142E93 /* APButton.swift in Sources */,
 				4B3117392E5F9FE0005FF588 /* Alert.swift in Sources */,
 				4B31173A2E5F9FE0005FF588 /* AppetizerCell.swift in Sources */,
+				4B058E6B2E730A630078D6E8 /* StandardButtonSyle.swift in Sources */,
 				4B8FBE352E6082E100142E93 /* DetailView.swift in Sources */,
 				4B31173B2E5F9FE0005FF588 /* LoadingView.swift in Sources */,
 				4B31173C2E5F9FE0005FF588 /* AppetizerModel.swift in Sources */,
@@ -504,8 +516,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,9 +526,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.XA1.Appetizers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -533,8 +549,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,9 +559,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.XA1.Appetizers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

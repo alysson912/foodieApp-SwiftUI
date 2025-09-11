@@ -16,9 +16,10 @@ struct AppetizerCell: View {
             AsyncImage(url: URL(string: appetizer.imageURL)) { image in
                 image
                     .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 120, height: 90)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
             } placeholder: {
                 
             }
