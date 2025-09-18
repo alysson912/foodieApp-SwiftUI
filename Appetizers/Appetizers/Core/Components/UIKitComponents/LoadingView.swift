@@ -25,6 +25,10 @@ struct ActivityIndicator: UIViewRepresentable {
         var body: some View {
             ZStack {
                 Color(.systemBackground).ignoresSafeArea()
+                
+                ProgressView("Loading...")
+                    .progressViewStyle(CircularProgressViewStyle(tint: .brandPrimary))
+                    .scaleEffect(2)
             }
         }
     }

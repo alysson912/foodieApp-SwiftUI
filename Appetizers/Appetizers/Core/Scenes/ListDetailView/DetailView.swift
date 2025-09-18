@@ -67,6 +67,7 @@ struct DetailView: View {
     }
     
     private var NutritionInfo: some View {
+        
         HStack (spacing: 40){
             VStack(spacing: 5){
                 Text("Calories")
@@ -84,7 +85,7 @@ struct DetailView: View {
                     .bold()
                     .font(.caption)
                 
-                Text("\(appetizer.carbs)")
+                Text("\(appetizer.carbs) g")
                     .foregroundStyle(.secondary)
                     .fontWeight(.semibold)
                     .italic()
@@ -95,7 +96,7 @@ struct DetailView: View {
                     .bold()
                     .font(.caption)
                 
-                Text("\(appetizer.protein)")
+                Text("\(appetizer.protein) g")
                     .foregroundStyle(.secondary)
                     .fontWeight(.semibold)
                     .italic()
