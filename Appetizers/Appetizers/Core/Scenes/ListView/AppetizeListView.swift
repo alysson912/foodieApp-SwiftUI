@@ -34,9 +34,10 @@ struct AppetizeListView: View {
                 .listStyle(.plain)
                 .disabled(viewModel.isShowingDetail) // disable scroll in subView
             }
-            .onAppear {
+            .task {
                 viewModel.getAppetizers()
             }
+            
             .blur(radius: viewModel.isShowingDetail ? 20 : 0) // se for verdadeiro apliquique o blur
             
             if viewModel.isShowingDetail {

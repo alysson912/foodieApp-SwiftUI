@@ -45,7 +45,7 @@ struct DetailView: View {
                 Text( "$\(appetizer.price, specifier: "%.2f") - Add order")
                 
             }
-            .modifier(StandardButtonSyle())
+            .modifier(StandardButtonStyle())
            .padding(.bottom, 30)
             
             

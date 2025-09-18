@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 /*
  //MARK: Declarando "Final" a classe:
-- Você está dizendo ao compilador que essa classe não pode ser herdada.
+ - Você está dizendo ao compilador que essa classe não pode ser herdada.
  
  - Vantagens:
  * Desempenho melhorado
  * Mais segurança no código
  * Clareza de intenção
  
-- Quando não usar final?
+ - Quando não usar final?
  * Se você pretende permitir que outras classes herdem dessa classe.
  * Se estiver criando uma classe base (superclasse) para ser reutilizada por herança.
  */
@@ -31,61 +31,115 @@ final class NetworkManager {
     
     private init() {}
     
-    func getAppetizers(completed: @escaping (Result<[AppetizerModel], APError>) -> Void) {
+    //MARK: OLD REQUEST
+    /*
+        func getAppetizers(completed: @escaping (Result<[AppetizerModel], APError>) -> Void) {
+            guard let url = URL(string: appetizerURL) else {
+                completed(.failure(.invalidURL))
+                return
+            }
+    
+            let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+                if let _ = error {
+                    completed(.failure(.unableToComplete))
+                    return
+                }
+    
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    completed(.failure(.invalidResponse))
+                    return
+                }
+                guard let data = data else {
+                    completed(.failure(.invalidResponse))
+                    return
+                }
+    
+                do {
+                    let decoder = JSONDecoder()
+                    let decodedResponse = try decoder.decode(AppetizerResponse.self, from: data)
+                    completed(.success(decodedResponse.request))
+                } catch {
+                    completed(.failure(.invalidData))
+                }
+    
+            }
+            task.resume()
+        }
+    
+        func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+            let cacheKey = NSString(string: urlString)
+    
+            if let image = cache.object(forKey: cacheKey) {
+                completed(image)
+                return
+            }
+    
+            guard let url = URL(string: urlString) else {
+                completed(nil)
+                return
+            }
+    
+            let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+                guard let data = data, let image = UIImage(data: data) else {
+                    completed(nil)
+                    return
+                }
+                self.cache.setObject(image, forKey: cacheKey)
+                completed(image)
+            }
+            task.resume()
+        }
+    
+    } */
+    
+    func getAppetizers() async throws -> [AppetizerModel] {
         guard let url = URL(string: appetizerURL) else {
-            completed(.failure(.invalidURL))
-            return
+            throw APError.invalidURL
         }
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            if let _ = error {
-                completed(.failure(.unableToComplete))
-                return
-            }
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(AppetizerResponse.self, from: data).request
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.invalidResponse))
-                return
-            }
-            guard let data = data else {
-                completed(.failure(.invalidResponse))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let decodedResponse = try decoder.decode(AppetizerResponse.self, from: data)
-                completed(.success(decodedResponse.request))
-            } catch {
-                completed(.failure(.invalidData))
-            }        
-            
+        } catch {
+            throw APError.invalidData
         }
-        task.resume()
+        
     }
     
-    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
-        let cacheKey = NSString(string: urlString)
+
+
+func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void ) {
+    
+    let cacheKey = NSString(string: urlString)
+    
+    if let image = cache.object(forKey: cacheKey) {
+        completed(image)
+        return
+    }
+    
+    guard let url = URL(string: urlString) else {
+        completed(nil)
+        return
+    }
+    
+    let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
         
-        if let image = cache.object(forKey: cacheKey) {
-            completed(image)
-            return
-        }
-        
-        guard let url = URL(string: urlString) else {
+        guard let data, let image = UIImage(data: data) else {
             completed(nil)
             return
         }
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            guard let data = data, let image = UIImage(data: data) else {
-                completed(nil)
-                return
-            }
-            self.cache.setObject(image, forKey: cacheKey)
-            completed(image)
-        }
-        task.resume()
+        self.cache.setObject(image, forKey: cacheKey)
+        completed(image)
     }
     
+    task.resume()
 }
+}
+
+
+
+

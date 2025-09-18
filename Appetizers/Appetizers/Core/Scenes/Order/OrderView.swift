@@ -32,12 +32,12 @@ struct OrderView: View {
                     } label: {
                         Text("\(order.totalPrice, specifier: "%.2f") - Place Order")
                     }
-                    .modifier(StandardButtonSyle())
+                    .modifier(StandardButtonStyle())
                     .padding(.bottom, 25)
                 }
                 
                 if order.items.isEmpty {
-                    EmptyState(imageName: "empty-order", message: "You have no items in your order. \n  Please add an appetizer!")
+                    OrderEmptyState(imageName: "empty-order", message: "You have no items in your order. \n  Please add an appetizer!")
                 }
             }
                 

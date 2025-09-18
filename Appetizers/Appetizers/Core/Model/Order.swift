@@ -15,8 +15,8 @@ final class Order: ObservableObject {
         items.append(appetizer)
     }
     
-    func deleteItems(at offesets: IndexSet) {
-        items.remove(atOffsets: offesets)
+    func deleteItems(at offsets: IndexSet) {
+        items.remove(atOffsets: offsets)
     }
     
     var totalPrice: Double {

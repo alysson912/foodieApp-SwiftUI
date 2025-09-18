@@ -21,7 +21,11 @@ struct AppetizerCell: View {
                     .frame(width: 120, height: 90)
                     
             } placeholder: {
-                
+                Image("food-placeholder")
+                    .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 90)
             }
             
             VStack (alignment: .leading, spacing: 5) {

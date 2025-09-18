@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct StandardButtonSyle: ViewModifier {
+struct StandardButtonStyle: ViewModifier {
     
     func body(content: Content) -> some View {
         content
@@ -18,3 +18,9 @@ struct StandardButtonSyle: ViewModifier {
         
     }
 }
+
+//extension View {
+//    func standardButtonStyle() -> some View {
+//        self.modifier(StandardButtonStyle())
+//    }
+//}
